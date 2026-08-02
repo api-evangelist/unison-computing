@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://api.unison-lang.org/.well-known/openid-configuration
+docs: https://github.com/unisoncomputing/share-api
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode]
+  pkce: true
+  token_signing: EdDSA (Ed25519)
+notes: >
+  Unison Share (share-api, open source) acts as the authentication server for
+  UCM and Unison Cloud. It implements OAuth2 (RFC 6749) with the PKCE
+  extension and a subset of the OpenID Connect Core and OpenID Connect
+  Discovery specifications. Live OIDC discovery document is published at
+  https://api.unison-lang.org/.well-known/openid-configuration (saved in
+  well-known/), with an EdDSA/Ed25519 JWKS at /.well-known/jwks.json.
+schemes:
+  - name: unison-share-oauth
+    type: oauth2
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://api.unison-lang.org/oauth/authorize
+        tokenUrl: https://api.unison-lang.org/oauth/token
+        pkce: required
+    issuer: https://api.unison-lang.org
+    jwks_uri: https://api.unison-lang.org/.well-known/jwks.json
+    userinfo_endpoint: https://api.unison-lang.org/user-info
+    response_types_supported: [code]
+    sources:
+      - well-known/unison-computing-openid-configuration.json
+      - https://github.com/unisoncomputing/share-api

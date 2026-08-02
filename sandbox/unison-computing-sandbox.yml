@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.unison.cloud/docs/local-development-faqs/
+docs:
+  - https://www.unison.cloud/docs/local-development/
+  - https://www.unison.cloud/docs/local-development-faqs/
+notes: >
+  Unison Cloud's sandbox surface is local development: cloud apps are run
+  locally through local variants of the deployment handlers before deploying.
+  There are no test API keys or magic test values; test-vs-live separation is
+  expressed through the Environment type and the local handlers.
+modes:
+  - name: local
+    description: >
+      Run Cloud apps locally with the Cloud.main.local handler; it exits
+      immediately after starting the service, suited to Unison-native
+      services, one-shot unit tests of services, or compute jobs.
+    handler: Cloud.main.local
+  - name: local-serve
+    description: >
+      Run a local HTTP service and keep it running for testing with curl or
+      the browser using the Cloud.main.local.serve handler.
+    handler: Cloud.main.local.serve
+environments:
+  description: >
+    The Environment type scopes configuration values and resources (databases,
+    services) to a context — it is broader than a prod/staging/local flag.
+    Environment.Config values may differ between environments.
+constraints:
+  - Arbitrary IO (e.g. printLine) and Debug.trace are not available in
+    production on the Cloud; use the Log ability (Log.info / Log.warn /
+    Log.error) instead.
+  - Deployed Unison-native services cannot be called across deployment
+    boundaries from a local test; test them locally or via a Cloud job.
+  - Local testing of deployed HTTP services is supported via regular HTTP
+    requests.
+free_tier:
+  source: https://www.unison.cloud/pricing/
+  description: >
+    Free plan for personal and non-commercial usage: unlimited private
+    projects, unlimited multi-user public projects, up to 5 services,
+    services deactivate every 3 weeks, 50MB storage, 5k service requests
+    per month.

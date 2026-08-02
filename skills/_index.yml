@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/unisoncomputing/unison-llm-support
+notes: >
+  Provider-published agent skills, saved verbatim from Unison Computing's
+  official unison-llm-support repository ("Unison language coding assistant
+  support files and instructions"). These are the provider's own operating
+  instructions for AI coding assistants using the Unison language and the
+  UCM MCP server (see mcp/unison-computing-mcp.yml). MIT/see LICENSE in the
+  source repository.
+skills:
+  - file: unison-computing-coding-assistant-instructions.md
+    name: Unison coding assistant instructions
+    description: >
+      Main prompt for coding assistants writing Unison code; delegates to
+      DISCOVERY / LEARN / BASIC / DEEP WORK / DOCUMENTING / TESTING modes and
+      instructs the model on using the Unison MCP server.
+    source: https://github.com/unisoncomputing/unison-llm-support/blob/main/instructions.md
+  - file: unison-computing-language-guide.md
+    name: Unison language guide
+    description: >
+      Language guide intended to be added as context to a coding assistant
+      before writing Unison code.
+    source: https://github.com/unisoncomputing/unison-llm-support/blob/main/unison-language-guide.md
+  - file: unison-computing-testing-guide.md
+    name: Unison testing guide
+    description: Provider guidance for writing tests in Unison.
+    source: https://github.com/unisoncomputing/unison-llm-support/blob/main/testing.md

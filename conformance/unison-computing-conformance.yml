@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/unisoncomputing/share-api
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: >
+      share-api README states Unison Share implements OAuth2 (RFC 6749) as the
+      authentication server for UCM and Unison Cloud; live authorization and
+      token endpoints published at https://api.unison-lang.org/oauth/authorize
+      and https://api.unison-lang.org/oauth/token.
+  - id: oauth2-pkce
+    conforms: true
+    evidence: >
+      share-api README states OAuth2 is implemented with the PKCE extension
+      (RFC 7636).
+  - id: oidc
+    conforms: partial
+    evidence: >
+      share-api README states Unison Share implements a subset of OpenID
+      Connect Core; userinfo endpoint at https://api.unison-lang.org/user-info.
+  - id: oidc-discovery
+    conforms: true
+    evidence: >
+      Live OpenID Connect Discovery document at
+      https://api.unison-lang.org/.well-known/openid-configuration (HTTP 200,
+      application/json; saved as well-known/unison-computing-openid-configuration.json)
+      with EdDSA JWKS at /.well-known/jwks.json.
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: >
+      No /.well-known/security.txt found on www.unison.cloud (502),
+      www.unison-lang.org (404), api.unison-lang.org (404); share and app
+      hosts return an SPA HTML catch-all.

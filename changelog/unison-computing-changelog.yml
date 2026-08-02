@@ -1,0 +1,56 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/unisonweb/unison/releases
+scheme: semver (release/x.y.z tags for UCM + language releases)
+current_version: 1.3.0
+current_release_date: '2026-05-20'
+notes: >
+  Unison Computing versions the Unison language and UCM (Unison Codebase
+  Manager) together through dated GitHub releases on unisonweb/unison.
+  A rolling trunk-build prerelease tracks development builds.
+entries:
+  - version: 1.3.0
+    date: '2026-05-20'
+    breaking: false
+    highlights:
+      - Expose P-256 ECDSA crypto builtins
+      - New `signature` command
+      - LSP fix - no type signature suggestions for generated methods
+  - version: 1.2.0
+    date: '2026-04-17'
+    breaking: false
+    highlights:
+      - Allow overlap of term+type references during canonicalization
+      - Support underscores in numeric literals
+      - Don't use pager for type errors
+  - version: 1.1.1
+    date: '2026-02-24'
+    breaking: false
+    highlights:
+      - Show full type definition for new type defs in `diff.update`
+      - Haskeline updates for ANSI terminals and prompt rendering fixes
+  - version: 1.1.0
+    date: '2026-01-28'
+    breaking: false
+    highlights:
+      - "`dependents` command now works on constructors and ability requests"
+      - Edit Definition and Open on Share support in the VS Code extension v1.5.0
+  - version: 1.0.2
+    date: '2026-01-05'
+    breaking: false
+    highlights:
+      - New `diff.update` command highlights changes in the scratch file
+      - MCP server improvements
+      - Fixed multi-line `match` scrutinee parsing error
+  - version: 1.0.1
+    date: '2025-12-21'
+    breaking: false
+    highlights:
+      - Big type-checking speed-up in common situations
+      - Faster JSON generation
+      - New `moveTo` command
+  - version: 1.0.0
+    date: '2025-11-25'
+    breaking: false
+    highlights:
+      - Unison 1.0.0 release

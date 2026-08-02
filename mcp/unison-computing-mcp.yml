@@ -1,0 +1,57 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/unisonweb/unison/blob/trunk/docs/mcp.md
+status: published
+notes: >
+  UCM (the Unison Codebase Manager) ships with a built-in MCP server for use
+  with AI agents. It runs locally (not hosted): either as an independent
+  stdio process (`ucm mcp`, recommended) or as a streamable-http connection
+  to a running UCM (default http://localhost:5858/codebase/mcp, configured by
+  UCM_PORT and UCM_TOKEN). Unison Computing also publishes prompts and agent
+  instructions for using the MCP server in the unisoncomputing/unison-llm-support
+  repository. The MCP server includes prompts of its own (e.g. a Unison
+  language guide).
+server:
+  name: unison
+  transport: stdio
+  command: ucm
+  args: [mcp]
+  alternate_transport:
+    type: streamable-http
+    url: http://localhost:5858/codebase/mcp
+    note: local UCM HTTP connection; replace port/token with UCM_PORT / UCM_TOKEN
+  distribution: packaged with UCM (Homebrew, Docker unisonlang/unison, GitHub releases)
+  llm_support: https://github.com/unisoncomputing/unison-llm-support
+tools:
+  - name: docs
+    description: View Unison documentation
+  - name: get-current-project-context
+    description: Get the current UCM project context
+  - name: lib-install
+    description: Install a library into the current project
+  - name: list-definition-dependencies
+    description: List dependencies of a definition
+  - name: list-definition-dependents
+    description: List dependents of a definition
+  - name: list-library-definitions
+    description: List definitions in a library
+  - name: list-local-projects
+    description: List local Unison projects
+  - name: list-project-branches
+    description: List branches of a project
+  - name: list-project-definitions
+    description: List definitions in a project
+  - name: list-project-libraries
+    description: List libraries used by a project
+  - name: search-by-type
+    description: Search definitions by type signature
+  - name: search-definitions-by-name
+    description: Search definitions by name
+  - name: share-project-readme
+    description: Fetch a Unison Share project README
+  - name: share-project-search
+    description: Search projects on Unison Share
+  - name: typecheck-code
+    description: Typecheck Unison code
+  - name: view-definitions
+    description: View source of definitions

@@ -1,0 +1,72 @@
+generated: '2026-07-21'
+method: searched
+notes: >
+  Unison Computing's first-party distributions are the UCM toolchain (Homebrew
+  tap, Docker image, Debian packages, GitHub release binaries), the official
+  VS Code extension, and Unison libraries published on Unison Share (the
+  provider's own package registry) under the @unison handle. The npm
+  @unisonlabs/* packages belong to a different company and are excluded.
+packages:
+  - language: unison
+    registry: unison-share
+    name: "@unison/cloud-start"
+    url: https://share.unison-lang.org/@unison/cloud-start
+    install: 'lib.install @unison/cloud-start (in UCM)'
+    official: true
+    description: Starter library for building and deploying Unison Cloud apps
+  - language: unison
+    registry: unison-share
+    name: "@unison/http"
+    url: https://share.unison-lang.org/@unison/http
+    install: 'lib.install @unison/http (in UCM)'
+    official: true
+    description: Unison HTTP library
+  - language: unison
+    registry: unison-share
+    name: "@unison/base"
+    url: https://github.com/unisonweb/base
+    install: 'lib.install @unison/base (in UCM)'
+    official: true
+    description: Unison base libraries
+  - language: haskell
+    registry: homebrew
+    name: unisonweb/unison (tap)
+    url: https://github.com/unisonweb/homebrew-unison
+    install: brew install unisonweb/unison/unison-language
+    official: true
+    description: Homebrew tap distributing UCM (formula unison-language.rb)
+  - language: haskell
+    registry: dockerhub
+    name: unisonlang/unison
+    url: https://hub.docker.com/r/unisonlang/unison
+    install: docker pull unisonlang/unison
+    official: true
+    description: Docker container for running the Unison Codebase Manager
+  - language: haskell
+    registry: debian
+    name: unison-debian
+    url: https://github.com/unisoncomputing/unison-debian
+    install: see repository for Debian/Ubuntu packages of UCM
+    official: true
+    description: Debian / Ubuntu packages of the Unison Codebase Manager
+  - language: javascript
+    registry: npm
+    name: "@unison-lang/ui-core-scripts"
+    url: https://www.npmjs.com/package/@unison-lang/ui-core-scripts
+    install: npm install @unison-lang/ui-core-scripts
+    official: true
+    description: Helper scripts for ui-core, the Unison design system
+  - language: typescript
+    registry: vscode-marketplace
+    name: unison-lang.unison
+    url: https://marketplace.visualstudio.com/items?itemName=unison-lang.unison
+    install: Install "Unison" from the VS Code marketplace
+    official: true
+    description: Official Unison extension for Visual Studio Code
+  - language: haskell
+    registry: github-releases
+    name: unisonweb/unison
+    url: https://github.com/unisonweb/unison/releases
+    install: download UCM release binaries
+    official: true
+    description: UCM release binaries for macOS, Linux, and Windows

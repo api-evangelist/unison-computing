@@ -1,0 +1,62 @@
+generated: '2026-07-21'
+method: searched
+notes: >
+  Probed 2026-07-21. share.unison-lang.org and app.unison.cloud return an SPA
+  HTML catch-all (200, text/html) for every /.well-known/ path — recorded as
+  not-found. The real machine-readable discovery surface lives on
+  api.unison-lang.org (the Unison Share API host), which publishes an OpenID
+  Connect discovery document and an EdDSA JWKS.
+hosts:
+  - host: https://api.unison-lang.org
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: unison-computing-openid-configuration.json
+      - path: /.well-known/jwks.json
+        status: 200
+        file: unison-computing-jwks.json
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://www.unison.cloud
+    documents:
+      - path: /.well-known/security.txt
+        status: 502
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: https://www.unison-lang.org
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: https://share.unison-lang.org
+    documents:
+      - path: /.well-known/*
+        status: 200
+        note: SPA HTML catch-all (text/html), not a real well-known document
+      - path: /llms.txt
+        status: 200
+        note: SPA HTML catch-all (text/html), not a real llms.txt
+  - host: https://app.unison.cloud
+    documents:
+      - path: /.well-known/*
+        status: 200
+        note: SPA HTML catch-all (text/html), not a real well-known document

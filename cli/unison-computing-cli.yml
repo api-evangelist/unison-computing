@@ -1,0 +1,52 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/unisonweb/unison
+docs: https://www.unison-lang.org/docs/
+name: ucm
+description: >
+  UCM, the Unison Codebase Manager, is Unison Computing's first-party CLI and
+  the primary interface to the Unison language, the codebase, Unison Share,
+  and Unison Cloud. It hosts an interactive REPL-style command loop, a local
+  codebase server with web UI (Unison Local), an LSP server for editors, and
+  a built-in MCP server for AI agents.
+install:
+  - method: homebrew
+    command: brew tap unisonweb/unison
+    url: https://github.com/unisonweb/homebrew-unison
+  - method: docker
+    command: docker pull unisonlang/unison
+    url: https://hub.docker.com/r/unisonlang/unison
+  - method: debian
+    url: https://github.com/unisoncomputing/unison-debian
+  - method: binaries
+    url: https://github.com/unisonweb/unison/releases
+commands:
+  - group: agents / MCP
+    commands:
+      - name: ucm mcp
+        description: Run the built-in MCP server over stdio for AI agents
+        source: https://github.com/unisonweb/unison/blob/trunk/docs/mcp.md
+  - group: code management
+    commands:
+      - name: diff.update
+        description: Highlight changes in the scratch file (added 1.0.2)
+        source: https://github.com/unisonweb/unison/releases (release/1.0.2)
+      - name: moveTo
+        description: Move definitions (added 1.0.1)
+        source: https://github.com/unisonweb/unison/releases (release/1.0.1)
+      - name: dependents
+        description: List dependents; works on constructors and ability requests since 1.1.0
+        source: https://github.com/unisonweb/unison/releases (release/1.1.0)
+      - name: signature
+        description: Show type signatures (added 1.3.0)
+        source: https://github.com/unisonweb/unison/releases (release/1.3.0)
+      - name: lib.install
+        description: Install a library from Unison Share into the current project
+        source: https://github.com/unisonweb/unison/blob/trunk/docs/mcp.md
+related_tools:
+  - name: UCM Desktop
+    description: Desktop app companion to the UCM CLI
+    url: https://github.com/unisonweb/ucm-desktop
+  - name: Unison Local UI
+    description: Codebase web UI that ships with UCM
+    url: https://github.com/unisonweb/unison-local-ui

@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/unisonweb/unison/releases
+versioning:
+  scheme: semver
+  current: 1.3.0
+  docs: https://github.com/unisonweb/unison/releases
+  notes: >
+    The Unison language and UCM are released together as semver GitHub
+    releases (release/x.y.z) with a rolling trunk-build prerelease. Unison
+    Cloud is a hosted platform without published version numbers.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: no published deprecation policy found
+sla:
+  url: null
+  notes: >
+    No published SLA found. Unison Cloud Free plan states services
+    deactivate every 3 weeks (https://www.unison.cloud/pricing/).
+status_page: null
+status_page_notes: >
+  No status page found; status.unison.cloud and status.unison-lang.org do
+  not resolve (probed 2026-07-21).
+deprecated_operations: []

@@ -1,0 +1,21 @@
+{
+  "repo": "unison-computing",
+  "feeds": [
+    {
+      "source": "https://www.unison-lang.org/feed.xml",
+      "feed_url": "https://www.unison-lang.org/feed.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://www.unison-lang.org/community/",
+      "feed_url": "https://www.unison-lang.org/feed.xml",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 50,
+  "fetched": "2026-08-01T15:49:00Z"
+}

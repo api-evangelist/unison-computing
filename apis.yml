@@ -63,6 +63,9 @@ apis:
   - type: OpenIDConnect
     url: https://api.unison-lang.org/.well-known/openid-configuration
 common:
+- type: License
+  name: MIT
+  url: https://github.com/unisoncomputing/share-api/blob/main/LICENSE
 - type: DomainSecurity
   url: security/unison-computing-domain-security.yml
 - type: Website

@@ -30,7 +30,7 @@ x-backed-by:
 - uncork-capital
 x-tier: enriched
 x-tier-reason: developer-tools company with real cloud platform, auth API, MCP, and agent-skill surface
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-21'
 tags:

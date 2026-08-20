@@ -40,6 +40,14 @@ tags:
 - Developer Tools
 - Functional Programming
 - Distributed Systems
+- Platform-as-a-Service
+tags_raw:
+- Company
+- Programming Languages
+- Cloud Computing
+- Developer Tools
+- Functional Programming
+- Distributed Systems
 - Platform as a Service
 apis:
 - name: Unison Share API
@@ -52,6 +60,11 @@ apis:
   humanURL: https://share.unison-lang.org
   baseURL: https://api.unison-lang.org
   tags:
+  - Code Hosting
+  - Packages
+  - Authentication
+  - OpenID Connect
+  tags_raw:
   - Code Hosting
   - Packages
   - Authentication

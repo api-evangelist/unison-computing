@@ -11,6 +11,19 @@ description: >-
   authentication server for UCM and Unison Cloud, and UCM ships a built-in MCP
   server plus official LLM coding-assistant instructions for AI agents.
 url: https://raw.githubusercontent.com/api-evangelist/unison-computing/refs/heads/main/apis.yml
+deliveryModel:
+  model: open-core
+  license: MIT
+  open_source: true
+  commercial: true
+  callable_host: false
+  label: Open core · an OSS project plus a commercial hosted product
+  confidence: high
+  source:
+  - license
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
@@ -76,6 +89,8 @@ apis:
   - type: OpenIDConnect
     url: https://api.unison-lang.org/.well-known/openid-configuration
 common:
+- type: IssueTracker
+  url: https://github.com/unisoncomputing/share-api/issues
 - type: License
   name: MIT
   url: https://github.com/unisoncomputing/share-api/blob/main/LICENSE
